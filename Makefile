@@ -2,7 +2,7 @@
 
 PHP_MAJOR_VERSION := $(shell php -r "echo PHP_MAJOR_VERSION;")
 
-.PHONY: clean clean-all test coverage
+.PHONY: clean clean-all check test coverage
 
 # ---------------------------------------------------------------------
 
