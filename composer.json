@@ -1,0 +1,31 @@
+{
+    "name": "mileschou/composer-skeleton",
+    "license": "MIT",
+    "description": "The skeleton for create Composer project",
+    "keywords": [
+        "skeleton"
+    ],
+    "authors": [
+        {
+            "name": "MilesChou",
+            "email": "jangconan@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6 | ^7 | ^8",
+        "squizlabs/php_codesniffer": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "MilesChou\\Skeleton\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    }
+}
