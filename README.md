@@ -1,7 +1,7 @@
 # Composer Template
 
 [![Build Status][travis-svg]][travis-link]
-[![Coverage Status](https://coveralls.io/repos/github/MilesChou/line-social-sdk-php/badge.svg?branch=master)]()
+[![Coverage Status][coveralls-svg]][coveralls-link]
 
 The template for create Composer project.
 
