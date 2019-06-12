@@ -1,9 +1,9 @@
 {
-    "name": "mileschou/composer-skeleton",
+    "name": "mileschou/composer-template",
     "license": "MIT",
-    "description": "The skeleton for create Composer project",
+    "description": "The template for create Composer project",
     "keywords": [
-        "skeleton"
+        "template"
     ],
     "authors": [
         {
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "MilesChou\\Skeleton\\": "src"
+            "MilesChou\\Template\\": "src"
         }
     },
     "autoload-dev": {
