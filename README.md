@@ -2,6 +2,7 @@
 
 [![Build Status][travis-svg]][travis-link]
 [![Coverage Status][coveralls-svg]][coveralls-link]
+[![Use this template](https://img.shields.io/badge/GitHub-Use_this_template-green.svg)](https://github.com/MilesChou/composer-template/generate)
 
 The template for create Composer project.
 
