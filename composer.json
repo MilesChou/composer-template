@@ -1,7 +1,8 @@
 {
     "name": "mileschou/composer-template",
-    "license": "MIT",
     "description": "The template for create Composer project",
+    "type": "library",
+    "license": "MIT",
     "keywords": [
         "template"
     ],
