@@ -2,7 +2,7 @@
 
 PHP_MAJOR_VERSION := $(shell php -r "echo PHP_MAJOR_VERSION;")
 
-.PHONY: clean clean-all check test analyse coverage
+.PHONY: all clean clean-all check test analyse coverage
 
 # ---------------------------------------------------------------------
 
@@ -13,11 +13,12 @@ clean:
 
 clean-all: clean
 	rm -rf ./vendor
+	rm -rf ./composer.lock
 
 check:
 	php vendor/bin/phpcs
 
-test: check
+test: clean check
 ifeq ($(PHP_MAJOR_VERSION), 7)
 	phpdbg -qrr vendor/bin/phpunit
 else
