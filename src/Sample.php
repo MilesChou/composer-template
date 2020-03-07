@@ -4,7 +4,7 @@ namespace MilesChou\Template;
 
 class Sample
 {
-    public function alwaysTrue()
+    public function alwaysTrue(): bool
     {
         return true;
     }
