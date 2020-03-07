@@ -1,13 +1,16 @@
 <?php
 
-namespace Tests;
+namespace Tests\Unit;
 
 use MilesChou\Template\Sample;
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
 
 class SampleTest extends TestCase
 {
-    public function testSample()
+    /**
+     * @test
+     */
+    public function sample(): void
     {
         $this->assertTrue((new Sample())->alwaysTrue());
     }
