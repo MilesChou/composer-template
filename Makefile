@@ -1,10 +1,10 @@
 #!/usr/bin/make -f
 
-.PHONY: all clean clean-all check test analyse coverage
+.PHONY: all clean clean-all check test coverage
 
 # ---------------------------------------------------------------------
 
-all: test analyse
+all: test
 
 clean:
 	git clean -Xfq build
@@ -17,10 +17,7 @@ check:
 	php vendor/bin/phpcs
 
 test: clean check
-	phpdbg -qrr vendor/bin/phpunit
-
-analyse:
-	php vendor/bin/phpstan analyse src --level=max
+	phpdbg -qrr vendor/bin/phpunit --testdox
 
 coverage: test
 	@if [ "`uname`" = "Darwin" ]; then open build/coverage/index.html; fi
