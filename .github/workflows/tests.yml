@@ -13,14 +13,14 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        php: [ 8.2, 8.1 ]
-        stability: [ prefer-lowest, prefer-stable ]
+        php: ["8.3", "8.2", "8.1"]
+        stability: ["prefer-lowest", "prefer-stable"]
 
     name: PHP ${{ matrix.php }} - ${{ matrix.stability }}
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -30,10 +30,10 @@ jobs:
           coverage: xdebug
 
       - name: Install dependencies
-        uses: nick-invision/retry@v1
+        uses: nick-fields/retry@v3
         with:
-          timeout_minutes: 5
-          max_attempts: 5
+          timeout_minutes: 3
+          max_attempts: 3
           command: composer update --${{ matrix.stability }} --prefer-dist --no-interaction --no-progress
 
       - name: Execute phpcs
@@ -42,5 +42,5 @@ jobs:
       - name: Execute tests
         run: php vendor/bin/phpunit
 
-      - name: Code coverage
-        uses: codecov/codecov-action@v1
+#      - name: Code coverage
+#        uses: codecov/codecov-action@v4
